@@ -40,7 +40,7 @@ jobs:
       run: |
         python -m pytest --verbose --junit-xml=junit.xml
     - name: Publish Test Report
-      uses: actions/action-junit-report@v3
+      uses: automate6501/action-junit-report@v3
       if: success() || failure() # always run even if the previous step fails
       with:
         report_paths: '**/junit.xml'
